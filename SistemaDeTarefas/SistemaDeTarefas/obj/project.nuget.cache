@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "X8Uw6M/qymA38CJzO0TRLsbtcA3LUIb0Hujfn0kKuqTQME212s3CdC5ddsRLfqtlwCaAlSFT3s912lu4lpKK5g==",
+  "dgSpecHash": "C4KpRo/98zbjjMAoktCAZDWWYIOnZi535rpClhH0lU1qC3pounkMsy+wDeZlZubj46urdtGM5CSgkEYk9Cn2Xw==",
   "success": true,
   "projectFilePath": "C:\\Users\\andre\\workspace-csharp\\APIs\\SistemaDeTarefas\\SistemaDeTarefas\\SistemaDeTarefas.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\andre\\.nuget\\packages\\elmah.corelibrary\\1.2.0\\elmah.corelibrary.1.2.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\elmah.mvc\\2.1.2\\elmah.mvc.2.1.2.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0\\microsoft.entityframeworkcore.6.0.0.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.0\\microsoft.entityframeworkcore.abstractions.6.0.0.nupkg.sha512",
@@ -106,5 +108,26 @@
     "C:\\Users\\andre\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'elmah.corelibrary 1.2.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "elmah.corelibrary",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Elmah.Mvc 2.1.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Elmah.Mvc",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

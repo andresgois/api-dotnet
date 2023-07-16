@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using SistemaDeTarefas.Data;
+using SistemaDeTarefas.Repository;
 using SistemaDeTarefas.Repository.interfaces;
 
 namespace SistemaDeTarefas
@@ -22,7 +23,7 @@ namespace SistemaDeTarefas
                         builder.Configuration.GetConnectionString("Database")
                         )
                 );
-            builder.Services.AddScoped<IUsuarioRepository, IUsuarioRepository>();
+            builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
 
             var app = builder.Build();
