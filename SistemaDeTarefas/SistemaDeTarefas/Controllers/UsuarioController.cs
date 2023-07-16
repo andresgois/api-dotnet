@@ -1,17 +1,58 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SistemaDeTarefas.Models;
+using SistemaDeTarefas.Repository.interfaces;
 
 namespace SistemaDeTarefas.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
     public class UsuarioController : ControllerBase
     {
-        [HttpGet]
-        public ActionResult<List<UsuarioModel>> BuscarTodosUsuario()
+
+        private readonly IUsuarioRepository _usuarioRepository;
+
+        public UsuarioController(IUsuarioRepository usuarioRepository)
         {
-            return Ok();
+            _usuarioRepository = usuarioRepository;
         }
+
+        [HttpGet]
+        public async Task<ActionResult<List<UsuarioModel>>> BuscarTodosUsuario()
+        {
+            List<UsuarioModel> usuario = await _usuarioRepository.BuscarTodosUsuarios(); 
+            return Ok(usuario);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<UsuarioModel>> BuscarPorUsuario(int id)
+        {
+            UsuarioModel usuario = await _usuarioRepository.BuscarPorId(id);
+            return Ok(usuario);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<UsuarioModel>> Cadastar([FromBody] UsuarioModel usuarioModel)
+        {
+            UsuarioModel usuario = await _usuarioRepository.Adicionar(usuarioModel);
+            return Ok(usuario);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<UsuarioModel>> Atualizar([FromBody] UsuarioModel usuarioModel, int id)
+        {
+            usuarioModel.Id = id;
+            UsuarioModel usuario = await _usuarioRepository.Atualizar(usuarioModel, id);
+            return Ok(usuario);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<UsuarioModel>> Deletar(int id)
+        {
+            bool deletado = await _usuarioRepository.Apagar(id);
+            return Ok(deletado);
+        }
+
     }
 }
