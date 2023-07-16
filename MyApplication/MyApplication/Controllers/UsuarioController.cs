@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
+using MyApplication.Model;
 
 namespace MyApplication.Controllers
 {
@@ -9,27 +9,32 @@ namespace MyApplication.Controllers
     {
         // GET: api/<UsuarioController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<UsuarioModel> Get()
         {
-            return new string[] { "value1", "value2" };
+            List<UsuarioModel> usuarioModels = new List<UsuarioModel>();
+            usuarioModels.Add(new UsuarioModel() { Id = 1, Name = "Andre", Email = "andre@email.com" });
+            return usuarioModels;
+            //return new string[] { "value1", "value2" };
         }
 
         // GET api/<UsuarioController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public UsuarioModel Get(int id)
         {
-            return "value";
+            UsuarioModel usuarioModel = new UsuarioModel() { Id = 1, Name = "Andre", Email = "andre@email.com" };
+            return usuarioModel;
         }
 
         // POST api/<UsuarioController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] UsuarioModel usuarioModel)
         {
+
         }
 
         // PUT api/<UsuarioController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] UsuarioModel usuarioModel)
         {
         }
 
