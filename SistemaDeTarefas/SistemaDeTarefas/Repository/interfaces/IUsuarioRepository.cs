@@ -1,14 +1,14 @@
 ﻿using SistemaDeTarefas.Models;
 
-namespace SistemaDeTarefas.Repository
+namespace SistemaDeTarefas.Repository.interfaces
 {
     public interface IUsuarioRepository
     {
         Task<List<UsuarioModel>> BuscarTodosUsuarios();
 
-        Task<UsuarioModel>  BuscarPorId(int id);
+        Task<UsuarioModel> BuscarPorId(int id);
 
-        Task<UsuarioModel>  Adicionar(UsuarioModel usuario);
+        Task<UsuarioModel> Adicionar(UsuarioModel usuario);
 
         Task<UsuarioModel> Atualizar(UsuarioModel usuario, int id);
 
