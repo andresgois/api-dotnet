@@ -16,7 +16,9 @@ namespace SistemaDeTarefas.Repository
 
         public async Task<TarefaModel> BuscarPorId(int id)
         {
-            return await _dbContext.Tarefas.FirstOrDefaultAsync(x => x.Id == id);
+            return await _dbContext.Tarefas
+                .Include(x => x.Usuario)
+                .FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<List<TarefaModel>> BuscarTodosTarefas()
