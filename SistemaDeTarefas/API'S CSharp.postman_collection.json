@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "af7bed6d-08e1-43e2-9e6e-335572aecbba",
+		"name": "API'S CSharp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7103249"
+	},
+	"item": [
+		{
+			"name": "SistemaDeTarefas",
+			"item": [
+				{
+					"name": "Usuario",
+					"item": [
+						{
+							"name": "todos os usuarios",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7081/api/Usuario",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7081",
+									"path": [
+										"api",
+										"Usuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "buscar por id usuario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7081/api/Usuario/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7081",
+									"path": [
+										"api",
+										"Usuario",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deletar usuario",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7081/api/Usuario/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7081",
+									"path": [
+										"api",
+										"Usuario",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "atualizar usuario",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Andre gois\",\r\n    \"email\": \"andre.sousa@email.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7081/api/Usuario/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7081",
+									"path": [
+										"api",
+										"Usuario",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cadastrar usuario",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Andre\",\r\n  \"email\": \"andre@email.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7081/api/Usuario",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7081",
+									"path": [
+										"api",
+										"Usuario"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Terafa",
+					"item": [
+						{
+							"name": "todos os tarefas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7081/api/Tarefa",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7081",
+									"path": [
+										"api",
+										"Tarefa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "buscar por id tarefa",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7081/api/Tarefa/3",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7081",
+									"path": [
+										"api",
+										"Tarefa",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deletar tarefa",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7081/api/Tarefa/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7081",
+									"path": [
+										"api",
+										"Tarefa",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "atualizar tarefa",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Lavar o carro\",\r\n    \"description\": \"Lavar o carro\",\r\n    \"status\": 1,\r\n    \"usuarioId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7081/api/Tarefa/3",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7081",
+									"path": [
+										"api",
+										"Tarefa",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cadastrar tarefa",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Lavar o carro\",\r\n  \"description\": \"Lavar o carro\",\r\n  \"status\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7081/api/Tarefa",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7081",
+									"path": [
+										"api",
+										"Tarefa"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
