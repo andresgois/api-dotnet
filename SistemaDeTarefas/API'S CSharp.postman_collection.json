@@ -136,7 +136,7 @@
 					]
 				},
 				{
-					"name": "Terafa",
+					"name": "Tarefa",
 					"item": [
 						{
 							"name": "todos os tarefas",
@@ -254,6 +254,32 @@
 									"path": [
 										"api",
 										"Tarefa"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CEP",
+					"item": [
+						{
+							"name": "BuscarCEP",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7081/api/Cep/61942250",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7081",
+									"path": [
+										"api",
+										"Cep",
+										"61942250"
 									]
 								}
 							},
